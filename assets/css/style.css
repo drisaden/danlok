@@ -1,0 +1,23 @@
+:root{
+    --text-hover: #6FABD0;
+    --bg-primary: #6FABD0;
+    --white: #f6f0f0;
+    --btn-hover: #8ccaf1;
+    --btn-hover-outline: var(--bg-primary);
+    --transition-slow: all 0.4s
+}
+
+.text-hover:hover{
+    color: var(--text-hover);
+}
+.bg-primary{
+    background-color: var(--bg-primary);
+    color: var(--white);
+}
+.btn-hover:hover{
+background-color: var(--btn-hover);
+transition: var(--transition-slow);
+}
+.btn-hover-o:hover{
+    color: var(--btn-hover-outline);
+}
