@@ -18,6 +18,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
         integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.tailwindcss.com"></script>
     <link
         href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
         rel="stylesheet">
@@ -105,7 +106,7 @@
                 <!-- Nav section -->
                 <nav class="bg-black md:px-20">
                     <div class="mx-auto md:flex">
-                        <div class="flex justify-between">
+                        <div class="flex justify-between items-center mx-5 md:mx-0">
                             <div class="flex">
                                 <a href="#" class="flex items-center py-4 px-2">
                                     <!-- <img src="" alt="logo"> -->
@@ -118,7 +119,7 @@
                                             class="w-36"></span>
                                 </a>
                             </div>
-                            <button data-collapse-toggle="navbar-default"
+                            <!-- <button data-collapse-toggle="navbar-default"
                                 type="button"
                                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-0"
                                 aria-controls="navbar-default"
@@ -132,10 +133,22 @@
                                         stroke-linejoin="round" stroke-width="2"
                                         d="M1 1h15M1 7h15M1 13h15" />
                                 </svg>
-                            </button>
+                            </button> -->
+                            <button data-collapse-toggle="navbar-default"
+                            type="button" class="relative group focus:outline-none focus:ring-0" 
+                            aria-controls="navbar-default"
+                            aria-expanded="false"  onclick="toggleMenu()">
+                                <div class="md:hidden relative flex items-center justify-center rounded-full w-12 h-12 transform transition-all ring-0 ring-gray-300 hover:ring-0 group-focus:ring-0 ring-opacity-0 duration-200 shadow-md">
+                                  <div class="flex flex-col justify-between w-10 h-10 transform transition-all duration-300 origin-center" onclick="myFunction(this)">
+                                   <div class="bar1"></div>
+                                    <div class="bar2"></div>
+                                    <div class="bar3"></div>
+                                </div>
+                                </div>
+                              </button>
                         </div>
                         <div
-                            class="hidden w-full md:flex items-center md:justify-center mx-auto lg:w-full lg:pl-48 space-x-1"
+                            class="hidden w-full md:flex items-center md:justify-center mx-auto lg:w-full lg:pl-48 space-x-1 mobile-menu"
                             id="navbar-default">
                             <ul class="md:flex items-center ml-4 md:ml-0 mb-5 md:mb-0">
                                 <li>
@@ -149,7 +162,7 @@
 
                                     <!-- Dropdown menu -->
                                     <div id="dropdownHover"
-                                        class="uppercase z-10 dropdown-container about-navbar hidden bg-white divide-y divide-gray-100 w-44">
+                                        class="uppercase z-10 dropdown-container about-navbar hidden py-2 text-sm text-white w-44">
                                         <ul class="py-2 text-sm text-white"
                                             aria-labelledby="dropdownHoverButton">
                                             <li>
@@ -181,7 +194,7 @@
 
                                     <!-- Dropdown menu -->
                                     <div id="dropdownHover2"
-                                        class="ml-50 uppercase z-10 dropdown-container service-navbar hidden bg-white w-56">
+                                        class="ml-50 uppercase z-10 dropdown-container service-navbar hidden w-56">
                                         <ul class="py-2 text-sm text-white"
                                             aria-labelledby="dropdownHoverButton2">
                                             <li>
@@ -234,7 +247,7 @@
 
                                     <!-- Dropdown menu -->
                                     <div id="dropdownHover3"
-                                        class="uppercase z-10 dropdown-container offer-navbar hidden bg-white divide-y divide-gray-100 w-56">
+                                        class="uppercase z-10 dropdown-container offer-navbar hidden py-2 text-sm text-white w-56">
                                         <ul class="py-2 text-sm text-white"
                                             aria-labelledby="dropdownHoverButton3">
                                             <li>
@@ -267,7 +280,7 @@
 
                                     <!-- Dropdown menu -->
                                     <div id="dropdownHover4"
-                                        class="uppercase z-10 dropdown-container hd-navbar hidden bg-white divide-y divide-gray-100 w-56">
+                                        class="uppercase z-10 dropdown-container hd-navbar hidden py-2 text-sm text-white w-56">
                                         <ul class="py-2 text-sm text-white"
                                             aria-labelledby="dropdownHoverButton4">
                                             <li>
