@@ -25,9 +25,7 @@ transition: var(--transition-slow);
 .navbar-hover:hover{
     background-color: var(--navbar-hover);
 }
-@media (min-width: 767px) {
-    
-
+/* @media (min-width: 767px) { */
 .about-navbar{
     left: 3% !important;
 }
@@ -39,7 +37,8 @@ transition: var(--transition-slow);
 }
 .hd-navbar{
     left: 2.5% !important;
-}}
+}
+/* } */
 
 .dropdown-container{
     position: absolute;
