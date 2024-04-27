@@ -3,6 +3,7 @@
     --bg-primary: #6FABD0;
     --white: #f6f0f0;
     --btn-hover: #8ccaf1;
+    --navbar-hover: #6fabd0;
     --btn-hover-outline: var(--bg-primary);
     --transition-slow: all 0.4s
 }
@@ -20,4 +21,30 @@ transition: var(--transition-slow);
 }
 .btn-hover-o:hover{
     color: var(--btn-hover-outline);
+}
+.navbar-hover:hover{
+    background-color: var(--navbar-hover);
+}
+
+@media (min-width: 706px) {
+    .about-navbar{
+    left: 3% !important;
+}
+.service-navbar{
+    left: 4.1% !important;
+}
+.offer-navbar{
+    left: 1.9% !important;
+}
+.hd-navbar{
+    left: 2.5% !important;
+}
+}
+
+.dropdown-container{
+    position: absolute;
+    top: 0;  
+    margin-top: -0.57rem !important;
+    color: var(--white) !important;
+    background-color: var(--navbar-hover);
 }
