@@ -21,7 +21,44 @@ var typed = new Typed('#typed', {
     startDelay: 2000,
   });
 
-const flipped = document.querySelector(".arrow-right");
-const matrix = new DOMMatrixReadOnly();
-const flippedMatrix = matrix.flipX();
-flipped.setAttribute("transform", flippedMatrix.toString());
+
+  //Counter
+  let progressBarList = document.querySelectorAll(".circular-progress");
+
+let valueContainerList = document.querySelectorAll(".value-container");
+
+let speed = 50;
+let startAnimation = false;
+
+window.addEventListener("scroll", () => {
+  if (!startAnimation && isElementInViewport(progressBarList[0])) {
+    startAnimation = true;
+    progressBarList.forEach((progressBar, index) => {
+      let progressValue = 0;
+      let progressEndValue = parseInt(valueContainerList[index].getAttribute("dataset"));
+
+      let progress = setInterval(() => {
+        progressValue++;
+        valueContainerList[index].textContent = `${progressValue}`;
+        progressBar.style.background = `conic-gradient(
+          #113247 ${progressValue * 3.6}deg,
+          #cadcff ${progressValue * 3.6}deg
+        )`;
+
+        if (progressValue >= progressEndValue) {
+          clearInterval(progress);
+        }
+      }, speed);
+    });
+  }
+});
+
+function isElementInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }

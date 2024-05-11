@@ -122,3 +122,12 @@ transition: var(--transition-slow);
 .arrow-right{
     transform: scaleX(-1);
 }
+
+.circular-progress:before {
+    content: "";
+    position: absolute;
+    height: 84%;
+    width: 84%;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
